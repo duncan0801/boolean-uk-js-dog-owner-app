@@ -7,7 +7,7 @@ const data = [
             eum maxime illo laborum omnis quo ab rem cupiditate nulla
             perspiciatis ipsum!`,
     isGoodDog: true,
-    image: "https://curriculum-content.s3.amazonaws.com/js/woof-woof/dog_1.jpg"
+    image: "https://i.pinimg.com/564x/9c/3f/cf/9c3fcf44054ce00fd27d204fe8a2ff6d.jpg"
   },
   {
     id: 2,
