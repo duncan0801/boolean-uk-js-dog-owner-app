@@ -47,17 +47,48 @@ function addAllDogsToList () {
 
             let heading = document.createElement("h2")
             let dogImage = document.createElement("img")
+
             dogImage.setAttribute("src", dog.image)
             dogImage.setAttribute("alt", "")
             let mainDogSection = document.createElement("div")
+
             mainDogSection.setAttribute("class", "main__dog-section__desc")
             let subHeading = document.createElement("h3")
             subHeading.innerText = "Bio"
+
             let dogInfo = document.createElement("p")
             dogInfo.innerText = dog.bio
+
+            let isNaughtyDiv = document.createElement("div")
+
+            let isNaughty = document.createElement("p")
+            isNaughty.innerText = `A ${dog.isGoodDog ?  `Good Dog!` : `Bad Dog!`}`
+            
+            let isNaughtyButton = document.createElement("button")
+            isNaughtyButton.innerText = `Change to ${dog.isGoodDog ?  `a Bad Dog` : `Good Dog`}`
+            isNaughtyButton.addEventListener("click", function () {
+
+                if (isNaughty.innerText = `A Good Dog!`) {
+
+                    isNaughty.innerText = `A ${dog.isGoodDog ?  `Bad Dog!` : `Good Dog!`}`
+
+                    isNaughtyButton.innerText = `Change to ${dog.isGoodDog ?  `a Good Dog` : `a Bad Dog`}`
+
+                }
+                else if (isNaughty.innerText = `A Bad Dog!`) {
+
+                    isNaughty.innerText = `A ${dog.isGoodDog ?  `Good Dog!` : `Bad Dog!`}`
+
+                    isNaughtyButton.innerText = `Change to ${dog.isGoodDog ?  `a Bad Dog` : `a Good Dog`}`
+                }
+
+            })
+
+            isNaughtyDiv.append(isNaughty, isNaughtyButton)
+
             mainDogSection.append(subHeading, dogInfo)
 
-            mainSection.append(heading, dogImage, mainDogSection)
+            mainSection.append(heading, dogImage, mainDogSection, isNaughtyDiv)
 
                 //         <h2>Mr. Bonkers</h2>
                 //     <img
